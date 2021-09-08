@@ -5,11 +5,89 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+        <title>loading my page</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background: #33ffe4;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #a {
+            width: 200px;
+            height: 200px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border-top: 10px solid gold;
+            position: relative;
+            animation: a1 2s linear infinite;
+
+        }
+
+        @keyframes a1 {
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        #a::before,
+        #a::after {
+            content: '';
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: -10px;
+            box-sizing: border-box;
+            border-radius: 50%;
+        }
+
+
+
+        #a::before {
+            border-top: 10px solid rgb(212, 21, 155);
+            transform: rotate(120deg);
+        }
+
+
+        #a::after {
+            border-top: 10px solid rgb(12, 187, 41);
+            transform: rotate(240deg);
+        }
+
+        .b {
+			font-size:25px;
+			font-weight:bold;
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            color: #fff;
+            text-align: center;
+            line-height: 200px;
+            animation: a2 2s linear infinite;
+
+        }
+
+        @keyframes a2 {
+            to {
+                transform: rotate(-360deg);
+            }
+
+        }
+    </style>
     </head>
 
     <body>
-        <h3>welcome to my first website</h3>
+        <div id="a">
+            <span class="b">loading...</span>
+        </div>
+    
     </body>
 
 </html>
